@@ -1,0 +1,10 @@
+- hosts: webservers
+  tasks:
+
+  - name: ping check
+    ping:
+    register: result
+
+  - name: debug
+    debug:
+      msg: "{{ result }}"
